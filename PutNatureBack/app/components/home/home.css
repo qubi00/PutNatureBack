@@ -1,10 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
 .home-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
     z-index: -1;
 }
 
+.full-title {
+    font-family: 'Libre Baskerville', serif;
+    text-align: right;
+    color: white;
+    position: absolute; 
+    top: 20vh; 
+    right: 2%; 
+    z-index: 1;
+}
+
+.title {
+    font-size: 6vw;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 2vw;
+    margin-top: 0vh;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 15vw;
+    }
+
+    .subtitle {
+        font-size: 6vw;
+        margin-right: 5vw;
+    }
+
+    .full-title {
+        margin-top: 20vh;
+        padding-right: 15px;
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 20vw;
+    }
+
+    .subtitle {
+        font-size: 8vw;
+        margin-right: 3vw;
+    }
+
+    .full-title {
+        margin-top: 30vh; 
+        padding-right: 10px;
+    }
+}

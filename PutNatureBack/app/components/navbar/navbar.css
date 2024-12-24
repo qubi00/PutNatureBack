@@ -62,4 +62,50 @@
 .navbar-item-c a:hover {
     color: #0070f3;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-group-a,
+    .navbar-group-b,
+    .navbar-group-c {
+        margin-right: 0;
+        gap:10px;
+        margin-left: 0;
+    }
+
+    .navbar-item-a {
+        font-size: 16px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-item-b {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-item-b svg {
+        margin-right: 10px;
+    }
+
+    .navbar {
+        padding: 0.5rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .navbar-item-a {
+        font-size: 14px;
+    }
+
+    .navbar-item-b {
+        font-size: 14px;
+    }
+}
   

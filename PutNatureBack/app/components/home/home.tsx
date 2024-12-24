@@ -4,8 +4,10 @@ import Image from 'next/image';
 const Home: React.FC = () => {
   return (
     <div className="home-container">
-      <h1>Put Nature Back</h1>
-      <p>OUR NAME IS OUR MISSION</p>
+        <div className = "full-title">
+            <h1 className = "title">Put Nature Back</h1>
+            <p className = "subtitle">OUR NAME IS OUR MISSION</p>
+        </div>
 
       <Image 
         src="/philly.jpg" 
