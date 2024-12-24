@@ -10,11 +10,25 @@ const Home: React.FC = () => {
         </div>
 
       <Image 
-        src="/philly.jpg" 
+        src="/pnbhome.png" 
         alt="Home Image" 
-        width={600} 
-        height={400} 
+        width={2560} 
+        height={1440} 
         className="home-image" 
+      />
+      <Image 
+        src="/masterlogo.png" 
+        alt="Home Logo" 
+        width={400} 
+        height={328} 
+        className="home-logo" 
+      />
+      <Image 
+        src="/downarrow.png" 
+        alt="Home Logo" 
+        width={400} 
+        height={328} 
+        className="home-arrow" 
       />
     </div>
   );

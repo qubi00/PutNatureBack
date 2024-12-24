@@ -26,14 +26,14 @@ const Navbar: React.FC = () => {
         </div>
 
         <div className="navbar-group-c">
-          <li className="navbar-item-b">
-            <Link href="/">
+          <li className="navbar-item-bag">
+            <Link href="/shopping-bag">
               <FaShoppingBag size={30} />
             </Link>
           </li>
-          <li className="navbar-item-b">
+          <li className="navbar-item-login">
             <Link href="/login">
-              <FaUserCircle size={30} style={{ borderRadius: '50%', padding: '10px' }} />
+              <FaUserCircle size={30} />
             </Link>
           </li>
         </div>

@@ -39,26 +39,31 @@
 }
   
 .navbar-item-a a,
-.navbar-item-b a,
+.navbar-item-bag a,
+.navbar-item-login a,
 .navbar-item-c a {
     color: #ffffff;
     text-decoration: none;
 }
   
-.navbar-item-b {
+.navbar-item-bag {
     display: flex;
     align-items: center;
+    margin-right: 26px;
+    cursor: pointer;
+}
+
+.navbar-item-login {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
     margin-right: 20px;
     cursor: pointer;
 }
   
-.navbar-item-b svg {
-    margin-right: 6px;
-    color: #ffffff;
-}
-  
 .navbar-item-a a:hover,
-.navbar-item-b a:hover,
+.navbar-item-bag a:hover,
+.navbar-item-login a:hover,
 .navbar-item-c a:hover {
     color: #0070f3;
 }
