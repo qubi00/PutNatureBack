@@ -1,36 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-/* Home Image - Full-width, scalable */
 .home-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%; 
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     z-index: -1;
-    object-fit: cover; /* Ensures the image covers the entire area */
+    object-fit: cover;
 }
 
-/* Logo - Scalable to keep proportions */
 .home-logo {
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: -6%;
-    width: 15vw; /* Width relative to viewport width */
-    height: auto; /* Maintains aspect ratio */
+    margin-top: -5%;
+    width: 15vw;
+    height: auto;
     filter: brightness(5);
     z-index: 1;
 }
 
-/* Arrow - Scalable based on viewport */
 .home-arrow {
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 35%;
-    width: 5vw; /* Width relative to viewport width */
-    height: auto; /* Maintains aspect ratio */
+    width: 5vw;
+    height: auto;
     filter: brightness(10);
     z-index: 1;
     animation: float 2s ease-in-out infinite;
@@ -41,7 +38,6 @@
     animation: float-hover 1.5s ease-in-out infinite;
 }
 
-/* Float animation for arrow */
 @keyframes float {
     0% {
         transform: translate(-50%, -50%) translateY(0);
@@ -66,39 +62,104 @@
     }
 }
 
-/* Full Title - Scalable positioning and font size */
 .full-title {
     font-family: 'Libre Baskerville', serif;
     text-align: right;
     color: white;
     position: absolute; 
-    top: 20vh; 
+    top: 25vh; 
     right: 2%; 
     z-index: 1;
 }
 
 .title {
-    font-size: 6vw; /* Font size relative to viewport width */
+    font-size: 6vw;
     margin-bottom: 0;
 }
 
 .subtitle {
-    font-size: 2vw; /* Font size relative to viewport width */
+    font-size: 2vw;
     margin-top: 0vh;
 }
 
-/* Responsive styles for tablets and smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 834px) and (max-width: 1366px) {
     .home-logo {
-        width: 20vw; /* Adjust logo size for smaller screens */
+        width: 25vw;
+        height: auto;
+        margin-top: 5%;
     }
 
     .home-arrow {
-        width: 8vw; /* Adjust arrow size for smaller screens */
+        width: 15%;
+        height: 10%;
+        margin-top: 100%;
     }
 
     .title {
-        font-size: 15vw; /* Increase font size on smaller screens */
+        font-size: 10vw;
+    }
+
+    .subtitle {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .home-logo {
+        width: 25vw;
+        height: auto;
+        margin-top: 0%;
+    }
+
+    .home-arrow {
+        width: 10%;
+        height: 10%;
+        margin-top: 100%;
+    }
+
+    .title {
+        font-size: 10vw;
+    }
+
+    .subtitle {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 834px) {
+    .home-logo {
+        width: 25vw;
+        height: auto;
+        margin-top: 2%;
+    }
+
+    .home-arrow {
+        width: 12%;
+        height: 10%;
+        margin-top: 100%;
+    }
+
+    .title {
+        font-size: 10vw;
+    }
+
+    .subtitle {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-logo {
+        width: 20vw;
+        margin-top: 0%;
+    }
+
+    .home-arrow {
+        width: 8vw;
+    }
+
+    .title {
+        font-size: 15vw;
     }
 
     .subtitle {
@@ -113,27 +174,27 @@
     }
 }
 
-/* Responsive styles for mobile screens */
 @media screen and (max-width: 480px) {
     .home-logo {
-        width: 25vw; /* Adjust logo size for even smaller screens */
+        width: 25vw;
+        margin-top: 0%;
     }
 
     .home-arrow {
-        width: 10vw; /* Adjust arrow size for mobile screens */
+        width: 10vw;
     }
 
     .title {
-        font-size: 20vw; /* Increase font size even more for small screens */
+        font-size: 18vw;
     }
 
     .subtitle {
-        font-size: 8vw;
+        font-size: 5vw;
         margin-right: 3vw;
     }
 
     .full-title {
-        margin-top: 30vh; 
+        margin-top: 15vh; 
         padding-right: 10px;
     }
 }
