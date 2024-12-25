@@ -1,5 +1,6 @@
 .navbar {
     padding: 1rem;
+    width: 100%;
 }
 
 .navbar-list {
@@ -9,35 +10,43 @@
     list-style-type: none;
     padding: 0;
     width: 100%;
+    margin: 0;
 }
-  
+
 .navbar-group-a {
     display: flex;
     align-items: center;
     margin-left: auto;
-    margin-right: 350px;
+    margin-right: 45%;
+    margin-top: 3%;
+    gap: 100%;
 }
-  
+
 .navbar-group-b {
     display: flex;
     align-items: center;
-    margin-right: -150px;
+    margin-right: 15%;
+    margin-top: 3%;
+    white-space: nowrap;
+    gap: 100%;
 }
-  
+
 .navbar-group-c {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-right: 5%;
+    margin-top: 1%;
+    gap: 40%;
 }
 
 .navbar-item-a {
     display: flex;
     align-items: center;
-    margin-right: 200px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 150%;
+    transition: font-size 0.2s ease-in-out;
 }
-  
+
 .navbar-item-a a,
 .navbar-item-bag a,
 .navbar-item-login a,
@@ -45,27 +54,131 @@
     color: #ffffff;
     text-decoration: none;
 }
-  
+
 .navbar-item-bag {
     display: flex;
     align-items: center;
-    margin-right: 26px;
+    margin-right: 10%;
     cursor: pointer;
 }
 
 .navbar-item-login {
     display: flex;
     align-items: center;
-    margin-top: 3px;
-    margin-right: 20px;
+    margin-top: 4%;
     cursor: pointer;
 }
-  
+
 .navbar-item-a a:hover,
 .navbar-item-bag a:hover,
 .navbar-item-login a:hover,
 .navbar-item-c a:hover {
     color: #0070f3;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1024px) {
+    .navbar-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-group-a,
+    .navbar-group-b{
+        gap: 40%;
+        margin-right: 15%;
+    }
+
+    .navbar-group-c {
+        gap: 25%;
+        margin-right: auto;
+    }
+
+    .navbar-item-a {
+        font-size: 200%;
+    }
+
+    .navbar-item-bag {
+        font-size: 200%;
+    }
+
+    .navbar-item-login {
+        font-size: 200%;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .navbar-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-group-a,
+    .navbar-group-b{
+        gap: 40%;
+        margin-right: 15%;
+    }
+
+    .navbar-group-c {
+        gap: 25%;
+        margin-right: auto;
+    }
+
+    .navbar-item-a {
+        font-size: 200%;
+    }
+
+    .navbar-item-bag {
+        font-size: 200%;
+    }
+
+    .navbar-item-login {
+        font-size: 200%;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 834px) {
+    .navbar-list {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-group-a,
+    .navbar-group-b{
+        gap: 40%;
+        margin-right: 15%;
+    }
+
+    .navbar-group-c {
+        gap: 10%;
+        margin-right: auto;
+    }
+
+    .navbar-item-a {
+        font-size: 150%;
+    }
+
+    .navbar-item-bag {
+        font-size: 120%;
+    }
+
+    .navbar-item-login {
+        font-size: 120%;
+    }
+
+    .navbar {
+        padding: 0.8rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -79,7 +192,7 @@
     .navbar-group-b,
     .navbar-group-c {
         margin-right: 0;
-        gap:10px;
+        gap: 15px;
         margin-left: 0;
     }
 
@@ -94,15 +207,18 @@
         margin-bottom: 10px;
     }
 
-    .navbar-item-b svg {
-        margin-right: 10px;
+    .navbar-item-bag {
+        font-size: 16px;
+    }
+
+    .navbar-item-login {
+        font-size: 16px;
     }
 
     .navbar {
         padding: 0.5rem;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .navbar-item-a {
@@ -112,5 +228,17 @@
     .navbar-item-b {
         font-size: 14px;
     }
+
+    .navbar-item-bag,
+    .navbar-item-login {
+        font-size: 14px;
+    }
+
+    .navbar-list {
+        padding: 0;
+    }
+
+    .navbar-item-a {
+        margin-bottom: 8px;
+    }
 }
-  
