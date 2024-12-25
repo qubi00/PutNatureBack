@@ -1,35 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-
+/* Home Image - Full-width, scalable */
 .home-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; 
+    height: 100vh; /* Full viewport height */
     z-index: -1;
+    object-fit: cover; /* Ensures the image covers the entire area */
 }
 
-.home-logo{
+/* Logo - Scalable to keep proportions */
+.home-logo {
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: -6%;
-    width: 15%;
-    height: 28%;
+    width: 15vw; /* Width relative to viewport width */
+    height: auto; /* Maintains aspect ratio */
     filter: brightness(5);
-    z-index: -1;
+    z-index: 1;
 }
 
-.home-arrow{
+/* Arrow - Scalable based on viewport */
+.home-arrow {
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 35%;
-    width: 5%;
-    height: 10%;
+    width: 5vw; /* Width relative to viewport width */
+    height: auto; /* Maintains aspect ratio */
     filter: brightness(10);
-    z-index: -1;
+    z-index: 1;
     animation: float 2s ease-in-out infinite;
     transition: transform 0.3s ease-in-out;
 }
@@ -38,6 +41,7 @@
     animation: float-hover 1.5s ease-in-out infinite;
 }
 
+/* Float animation for arrow */
 @keyframes float {
     0% {
         transform: translate(-50%, -50%) translateY(0);
@@ -62,6 +66,7 @@
     }
 }
 
+/* Full Title - Scalable positioning and font size */
 .full-title {
     font-family: 'Libre Baskerville', serif;
     text-align: right;
@@ -73,18 +78,27 @@
 }
 
 .title {
-    font-size: 6vw;
+    font-size: 6vw; /* Font size relative to viewport width */
     margin-bottom: 0;
 }
 
 .subtitle {
-    font-size: 2vw;
+    font-size: 2vw; /* Font size relative to viewport width */
     margin-top: 0vh;
 }
 
+/* Responsive styles for tablets and smaller screens */
 @media screen and (max-width: 768px) {
+    .home-logo {
+        width: 20vw; /* Adjust logo size for smaller screens */
+    }
+
+    .home-arrow {
+        width: 8vw; /* Adjust arrow size for smaller screens */
+    }
+
     .title {
-        font-size: 15vw;
+        font-size: 15vw; /* Increase font size on smaller screens */
     }
 
     .subtitle {
@@ -99,9 +113,18 @@
     }
 }
 
+/* Responsive styles for mobile screens */
 @media screen and (max-width: 480px) {
+    .home-logo {
+        width: 25vw; /* Adjust logo size for even smaller screens */
+    }
+
+    .home-arrow {
+        width: 10vw; /* Adjust arrow size for mobile screens */
+    }
+
     .title {
-        font-size: 20vw;
+        font-size: 20vw; /* Increase font size even more for small screens */
     }
 
     .subtitle {
