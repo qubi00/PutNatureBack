@@ -1,0 +1,71 @@
+.info-container {
+    background: #ffffff;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow-y: auto; 
+}
+
+.info-navbar .navbar-item-a a,
+.info-navbar .navbar-item-bag a,
+.info-navbar .navbar-item-login a,
+.info-navbar .navbar-item-c a {
+    color: #000000; 
+}
+
+.info-navbar .navbar-item-a a:hover,
+.info-navbar .navbar-item-bag a:hover,
+.info-navbar .navbar-item-login a:hover,
+.info-navbar .navbar-item-c a:hover {
+    color: #0070f3; 
+}
+
+.info-logo {
+    margin-top: 2%;
+    width: 15vw;
+    height: auto;
+    filter: brightness(1.5) sepia(1) hue-rotate(90deg); 
+}
+
+.info-text-box {
+    max-width: 40rem; 
+    margin: 5% auto; 
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6; 
+    text-align: left;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background: #f9f9f9; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
+
+.info-team-section {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.team-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.team-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.team-list li {
+    margin: 0.5rem 0;
+}
