@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from './components/navbar/navbar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
