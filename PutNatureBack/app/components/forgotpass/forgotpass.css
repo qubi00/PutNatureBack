@@ -1,0 +1,66 @@
+.forgot-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forgot-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #171717;
+    font-size: 1.8rem;
+}
+
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-form label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.forgot-form input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.forgot-form button {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #171717;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-form button:hover {
+    background-color: #333;
+}
+
+p {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+p a {
+    color: #171717;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: #333;
+    text-decoration: underline;
+}  

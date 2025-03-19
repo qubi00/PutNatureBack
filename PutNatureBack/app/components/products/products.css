@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+/* Container similar to .info-container */
+.products-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Logo (mirroring .info-logo) */
+.products-logo {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -5%;
+    top: 10.5%;
+    width: 15vw;
+    height: auto;
+    filter: brightness(1.5) sepia(1) hue-rotate(90deg); 
+    z-index: 1; 
+}
+
+/* Horizontal line (mirroring .info-line) */
+.products-line {
+    position: absolute;
+    top: calc(10.5% + 8vw);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 2;
+}
+
+/* Title text */
+.products-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Text area, now pushed as close as possible to the "no products yet" message */
+.products-text-box {
+    position: relative;
+    max-width: 30rem;
+    margin: 0 auto 0;  /* removed top margin */
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    background: #ffffff; 
+    color: #171717;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    z-index: 10; 
+}
+
+/* Content wrapper */
+.products-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Bear image, positioned similarly to .info-manatee */
+.products-bear {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    margin-top: 10rem;
+    z-index: 10;
+}
+
+/* Media Queries (patterned after info.css) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .products-logo {
+        width: 25vw;
+        height: auto;
+    }
+    .products-line {
+        top: calc(10.5% + 12vw);
+    }
+}
+
+@media screen and (min-width: 834px) and (max-width: 1024px) {
+    .products-logo {
+        width: 25vw;
+        height: auto;
+    }
+    .products-line {
+        top: calc(10.5% + 12vw);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 834px) {
+    .products-logo {
+        width: 25vw;
+        height: auto;
+    }
+    .products-line {
+        top: calc(10.5% + 15vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products-logo {
+        width: 20vw;
+        height: auto;
+    }
+    .products-line {
+        top: calc(10.5% + 18vw);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products-logo {
+        width: 25vw;
+        height: auto;
+    }
+    .products-line {
+        top: calc(10.5% + 23vw);
+    }
+}

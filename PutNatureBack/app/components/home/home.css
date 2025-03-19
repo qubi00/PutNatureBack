@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+.home-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .home-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 100vh;
     z-index: -1;
     object-fit: cover;
@@ -14,11 +31,10 @@
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: -5%;
-    top: 10.5%;
-    width: 15vw;
+    top: 10%;
+    width: 200px;
     height: auto;
-    filter: brightness(5);
+    filter: brightness(0) invert(1);
     z-index: 1;
 }
 
@@ -26,13 +42,16 @@
     position: absolute;
     margin-left: 50%;
     transform: translateX(-50%);
-    margin-top: 35%;
-    width: 5vw;
+    bottom: 5vh;
+    width: 4vw;
+    min-width: 30px;
+    max-width: 60px;
     height: auto;
     filter: brightness(10);
-    z-index: 1;
+    z-index: 20;
     animation: float 2s ease-in-out infinite;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .home-arrow:hover {
@@ -67,135 +86,274 @@
     font-family: 'Libre Baskerville', serif;
     text-align: right;
     color: white;
-    position: absolute; 
-    top: 25vh; 
-    right: 2%; 
+    position: absolute;
+    top: 30vh;
+    right: 5%;
     z-index: 1;
+    width: auto;
+    max-width: 90%;
 }
 
 .title {
-    font-size: 6vw;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .subtitle {
-    font-size: 2vw;
-    margin-top: 0vh;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 0.5rem;
 }
 
-@media screen and (min-width: 834px) and (max-width: 1366px) {
-    .home-logo {
-        width: 25vw;
-        height: auto;
-        margin-top: 5%;
-    }
-
-    .home-arrow {
-        width: 15%;
-        height: 10%;
-        margin-top: 100%;
-    }
-
-    .title {
-        font-size: 10vw;
-    }
-
-    .subtitle {
-        font-size: 4vw;
-    }
+.white-section {
+    background-color: white;
+    padding: 80px 20px;
+    margin-top: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1366px) {
-    .home-logo {
-        width: 25vw;
-        height: auto;
-        margin-top: 0%;
-    }
-
-    .home-arrow {
-        width: 10%;
-        height: 10%;
-        margin-top: 100%;
-    }
-
-    .title {
-        font-size: 10vw;
-    }
-
-    .subtitle {
-        font-size: 4vw;
-    }
+.section-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    text-align: center;
+    color: #000000;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+    position: relative;
+    top: -30px;
+    padding: 0 20px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 834px) {
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px auto;
+    gap: 40px;
+    padding: 10px 20px;
+    max-width: 1200px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-image {
+    max-width: 500px;
+    width: 45%;
+    min-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
+}
+
+.content-section.fade-in .content-image {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content-section.reverse .content-image {
+    transform: translateX(20px);
+}
+
+.content-section.reverse.fade-in .content-image {
+    transform: translateX(0);
+}
+
+.content-text {
+    max-width: 45%;
+    min-width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.6;
+    color: #171717;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s;
+}
+
+.content-section.fade-in .content-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content-section.reverse .content-text {
+    transform: translateX(-20px);
+}
+
+.content-section.reverse.fade-in .content-text {
+    transform: translateX(0);
+}
+
+.content-text h2 {
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #171717;
+}
+
+.content-text p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    margin: 0;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .content-section {
+        gap: 30px;
+        margin: 40px auto;
+    }
+
+    .content-image {
+        max-width: 45%;
+    }
+
+    .content-text {
+        max-width: 50%;
+    }
+
     .home-logo {
-        width: 25vw;
-        height: auto;
-        margin-top: 2%;
-    }
-
-    .home-arrow {
-        width: 12%;
-        height: 10%;
-        margin-top: 100%;
-    }
-
-    .title {
-        font-size: 10vw;
-    }
-
-    .subtitle {
-        font-size: 2.5vw;
+        width: 30vw;
+        min-width: 200px;
+        max-width: 400px;
+        top: 12%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        margin: 40px auto;
+    }
+
+    .content-section.reverse {
+        flex-direction: column;
+    }
+
+    .content-image {
+        max-width: 90%;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .content-text {
+        max-width: 90%;
+        min-width: unset;
+    }
+
+    .section-title {
+        max-width: 90%;
+        top: -20px;
+    }
+
     .home-logo {
-        width: 20vw;
-        margin-top: 0%;
+        width: 180px;
+        top: 15%;
     }
 
     .home-arrow {
-        width: 8vw;
-    }
-
-    .title {
-        font-size: 15vw;
-    }
-
-    .subtitle {
-        font-size: 6vw;
-        margin-right: 5vw;
+        bottom: 3vh;
+        width: 6vw;
     }
 
     .full-title {
-        margin-top: 20vh;
-        padding-right: 15px;
-        right: 5%;
+        top: 35vh;
+        right: 10%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .home-logo {
-        width: 25vw;
-        margin-top: 0%;
+        width: 160px;
+        top: 12%;
     }
 
     .home-arrow {
-        width: 10vw;
-    }
-
-    .title {
-        font-size: 18vw;
-    }
-
-    .subtitle {
-        font-size: 5vw;
-        margin-right: 3vw;
+        bottom: 2vh;
+        width: 8vw;
     }
 
     .full-title {
-        margin-top: 15vh; 
-        padding-right: 10px;
+        top: 30vh;
+        right: 5%;
     }
+
+    .section-title {
+        padding: 0 15px;
+    }
+
+    .content-section {
+        padding: 10px 15px;
+    }
+}
+
+.mobile-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.warning-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
+}
+
+.warning-content h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.warning-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.warning-content button {
+    background-color: #799983;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.warning-content button:hover {
+    background-color: #6a8872;
 }

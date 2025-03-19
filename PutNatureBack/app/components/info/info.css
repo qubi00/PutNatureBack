@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 .info-container {
-    position: relative;
-    background: #ffffff;
-    font-family: 'Libre Baskerville', serif;
-    color: #171717;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 .info-image {
@@ -19,16 +13,17 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: -1; 
+    z-index: -10; 
     object-fit: cover;
 }
 
 .info-logo {
     position: absolute;
-    top: 10.5%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    width: 15vw; 
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -5%;
+    top: 10.5%;
+    width: 15vw;
     height: auto;
     filter: brightness(1.5) sepia(1) hue-rotate(90deg); 
     z-index: 1; 
@@ -44,39 +39,67 @@
     z-index: 2;
 }
 
+.info-who-we-are {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+    top: 200px;
+    width: 100%;
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .info-text-box {
     position: relative;
     max-width: 40rem;
     margin: 35vh auto 0; 
+    top: -80px;
     padding: 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    line-height: 1.5;
     text-align: left;
     background: #ffffff; 
     color: #171717;
     word-wrap: break-word;
     overflow-wrap: break-word;
     z-index: 10; 
-    transform: translateX(-20%); 
+    transform: translateX(17%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.info-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; /* Center the content in the container */
+    gap: 1rem; /* Reduce spacing between the text and the image */
+    max-width: 100%; /* Restrict the overall width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0;
+    overflow: visible;
+}
+
+.info-manatee {
+    flex-shrink: 0;
+    max-width: 500;
+    max-height: auto;
+    object-fit: contain;
+    transform: translate(-250px, 190px); /* Adjusts the position: left (-20px) and down (+30px) */
+    position: relative; /* Ensures transform works properly relative to its current position */
 }
 
 .info-team-section {
     margin-top: 2rem;
+    margin-bottom: 4rem;
     text-align: center;
     width: 100%;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.team-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .team-list {
     padding: 0;
     margin: 1rem 0 0; 
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .team-list li {
