@@ -1,6 +1,6 @@
 # Put Nature Back
 
-A Next.js web application focused on environmental conservation and sustainable practices. The website features a modern, responsive design with interactive elements and informative content about environmental initiatives.
+Yes, I used ai to write this out for me. I ain't writing allat. A Next.js web application focused on environmental conservation and sustainable practices. The website features a modern, responsive design with interactive elements and informative content about environmental initiatives.
 
 ## Features
 
