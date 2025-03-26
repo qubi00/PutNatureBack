@@ -11,6 +11,9 @@ body, html {
 }
 
 .home-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -28,14 +31,11 @@ body, html {
 }
 
 .home-logo {
-    position: absolute;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    top: 10%;
-    width: 200px;
-    height: auto;
-    filter: brightness(0) invert(1);
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+
 }
 
 .home-arrow {

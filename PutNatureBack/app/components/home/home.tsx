@@ -45,19 +45,10 @@ const Home: React.FC = () => {
       <Image 
         src="/pnbhome.png" 
         alt="Home Image" 
-        width={2560} 
-        height={1440} 
+        width={1920} 
+        height={1080} 
         className="home-image" 
       />
-
-      <Image 
-        src="/pnb.png" 
-        alt="PNB Logo" 
-        width={200} 
-        height={200} 
-        className="home-logo" 
-      />
-
       {/* Down Arrow */}
       <div onClick={scrollToSection}>
         <Image 
