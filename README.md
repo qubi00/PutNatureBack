@@ -14,3 +14,5 @@ _Website Status:_ Down till further notice...
 * Ryan Deng
 * Zhen Yu Zhang
 * Selena Lyn Yee
+* Calvin Zhou
+* Eric Zhang
