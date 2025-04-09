@@ -15,11 +15,15 @@ const Navbar: React.FC = () => {
           <Link href="/" className="nav-linkouterleft">Home</Link>
           <Link href="/products" className="nav-linkright">Products</Link>
 
-        <div className="navbar-logo">
-          <Link href="/">
-            <Image src="/Love_Teal.png" alt="Put Nature Back Logo" width={220} height={198}/>
-          </Link>
-        </div>
+        <div className="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center">
+             <Image
+               src="/Love_Teal.png"
+               width={115}
+               height={100}
+               alt="Mock Interview Logo"
+               className="w-full h-full object-cover"
+             />
+          </div>
 
 
           <Link href="/about" className="nav-linkleft">About</Link>
